@@ -5,6 +5,16 @@ const { check, validationResult } = require('express-validator');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  const LOGADO = req.session.USER != undefined;
+  if (LOGADO) {
+    res.redirect('/users/home');
+    return;
+  } else {
+    next();
+  } 
+});
+
+router.get('/', function (req, res, next) {
   res.render('entrar', { title: 'Login', errors: false });
 });
 
@@ -17,7 +27,7 @@ router.get('/index', function (req, res, next) {
 router.get('/login', function (req, res, next) {
   res.render('entrar', { title: 'Login', errors: false });
 });
- 
+
 // Realizar o login 
 router.post('/login', [
   check('email', 'Email ou senha inválido').isEmail(),
