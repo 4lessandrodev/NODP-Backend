@@ -18,6 +18,9 @@
     </a></li>
     <li><a href="/users/notificacoes">
       <i class="far fa-bell"></i>
+      <% if (notificacoes > 0) { %>
+      <span id="notificacao-mobile"><%=notificacoes%></span>
+      <% } %>
     </a></li>
     <li><a href="/users/perfil">
       <i class="far fa-user"></i>

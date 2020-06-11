@@ -82,6 +82,7 @@ module.exports = {
       res.redirect('/users/home');
     } catch (error) {
       console.log(error);
+      res.send(error);
     }
   },
   

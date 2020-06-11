@@ -10,9 +10,10 @@
   
   <% for( let apoiado of apoiados  ) { %>
     
-    <div class="row apoia" onclick="location.href='/users/perfil-usuario?perfil=<%=apoiado.apoiado.id%>'">
-      <img src="/img/profile-img/<%=apoiado.apoiado.avatar%>" class=" rounded-circle" alt="jandira">
-      <div class="col ">
+    <div class="row apoia">
+      <img src="/img/profile-img/<%=apoiado.apoiado.avatar%>" class=" rounded-circle" alt="jandira"
+        onclick="location.href='/users/perfil-usuario?perfil=<%=apoiado.apoiado.id%>'">
+      <div class="col " onclick="location.href='/users/perfil-usuario?perfil=<%=apoiado.apoiado.id%>'">
         <h2 class="subtitulo"><%=apoiado.apoiado.nome%></h2>
         <h3 class="texto"><%=apoiado.apoiado.curso.descricao.slice(0,17)%>...</h3>
       </div>

@@ -33,19 +33,22 @@
 <section id="mobilePostPesquisa" class="container">
     <!-- Search form -->
     <div class="post-coment">
-        <div class="input-group">
-            <input class="form-control" type="text" placeholder="Pesquisar" aria-label="Search" id="search-mobile">
-            <div class="input-group-append">
-              <button class="btn" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-            <div class="input-group-append">
-                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
-        </div>
+      <div class="input-group">
+        <form id="form-pesquisar_mobile" class="input-group">
+          <input class="form-control" type="text" placeholder="Pesquisar" aria-label="Search" id="search-mobile">
+          <div class="input-group-append">
+            <button class="btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="input-group-append">
+            <button class="btn" type="submit" data-toggle="collapse" data-target="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              <i class="fas fa-filter"></i>
+            </button>
+          </div>
+        </form>
+      </div>
 
         <div class="collapse" id="collapseExample">
           <div class="card card-body">

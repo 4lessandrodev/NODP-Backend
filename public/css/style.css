@@ -724,7 +724,7 @@ section#aulas-recentes img {
 }
 
 .row-botoes-perfil {
-  width: 58vw;
+  width: 51vw;
   height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1886,6 +1886,14 @@ section#mensagens {
   #conquista-professor ul {
     margin: 0;
     padding: 1vh 1vh 3vh 1vh;
+  }
+  
+  #mobile-footer #notificacao-mobile {
+    background-color: red;
+    color: var(--text-primary-color);
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 12px;
   }
 }
 /*AQUI FINALIZA O CSS PARA MOBILE*/
