@@ -12,8 +12,11 @@
 > Demo do projeto Figma:
 [Clique para ver a Demo no figma](https://www.figma.com/proto/NxVG7XuHkqdQlMCHU0LdVq/NODP-OFICIAL-TEAM?node-id=6%3A20&scaling=scale-down)
 
-> App online no Heroku:
+> App demo no heroku:
 [Clique e veja o app em ação no Heroku](https://hidden-reaches-26348.herokuapp.com)
+
+> App em Produção:
+[Clique e veja em produção](http://alessandrodev.com:21165/)
 
 ------------
 
