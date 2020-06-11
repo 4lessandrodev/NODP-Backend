@@ -35,15 +35,35 @@
 </section>
 
 <script>
-  
   function redirecionarParaPerfil(element){
     let id = element.attributes[1].textContent;
     console.log(id);
     let paginaAtual = location.pathname;
-    if(paginaAtual == '/users/home'){
+    
+    switch(paginaAtual){
+      case '/users/home':
       location.href='/users/perfil';
-    }else{
-      location.href=`/users/perfil-usuario?perfil=${id}`
+      break;
+      
+      case '/users/mensagens':
+      location.href='/users/perfil';
+      break;
+      
+      case '/users/notificacoes':
+      location.href='/users/perfil';
+      break;
+      
+      case '/users/apoio':
+      location.href='/users/perfil';
+      break;
+      
+      case '/users/apoiadores':
+      location.href='/users/perfil';
+      break;
+      
+      default:
+      location.href=`/users/perfil-usuario?perfil=${id}`;
+      break;
     }
   };
 </script>
