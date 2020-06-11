@@ -19,7 +19,9 @@
     <ul class="header-nav-ul">
       <li><a href="/users/home"><i class="fas fa-home"></i></a></li>
       <li>
-        <a href="/users/notificacoes"><i class="fas fa-bell"></i><span id="notificacao"><%=notificacoes%></span></a>
+        <a href="/users/notificacoes"><i class="fas fa-bell"></i><% if (notificacoes > 0) { %>
+         <span id="notificacao"><%=notificacoes%></span>
+        <% } %></a>
       </li>
       <li>
         <a href="/users/mensagens"><i class="fas far fa-comment-alt"></i></a>

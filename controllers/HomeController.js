@@ -53,7 +53,7 @@ let { Perfil, Cidade,
           });
           
           
-          if (idsApoiados != '') {
+          //if (idsApoiados != '') {
             let ids = [id];
             
             for (let id of idsApoiados) {
@@ -102,7 +102,7 @@ let { Perfil, Cidade,
                 ],
                 order: sequelize.literal('id DESC'),
               });
-            }
+           // }
             
             const aulas = await AulaMinistrada.findAll({
               where: { usuario_id: id },

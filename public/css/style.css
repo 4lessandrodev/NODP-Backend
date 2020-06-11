@@ -1887,6 +1887,14 @@ section#mensagens {
     margin: 0;
     padding: 1vh 1vh 3vh 1vh;
   }
+  
+  #mobile-footer #notificacao-mobile {
+    background-color: red;
+    color: var(--text-primary-color);
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 12px;
+  }
 }
 /*AQUI FINALIZA O CSS PARA MOBILE*/
 /*-----------------------------------------------------------------------------------*/
