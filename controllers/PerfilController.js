@@ -17,6 +17,7 @@ module.exports = {
   
   salvar: async (req, res, next) => {
     let perfil = {};
+    let id = req.session.USER.id;
     let {
       cidade_id,
       nome,
@@ -29,9 +30,10 @@ module.exports = {
       metodo_ensino_id, 
       metodo_aprendizado_id, 
     } = req.body;
+    let { files } = req;
     
     perfil.cidade_id = parseInt(cidade_id);
-    perfil.id = req.session.USER.id;
+    perfil.id = id;
     perfil.nome = nome;
     perfil.curso_id = curso_id;
     perfil.bio = bio;
@@ -42,17 +44,19 @@ module.exports = {
     perfil.metodo_ensino_id = metodo_ensino_id;
     perfil.metodo_aprendizado_id = metodo_aprendizado_id;
     
-    for (let file of req.files) {
-      if (file.fieldname.toUpperCase() == 'CAPA') {
-        perfil.capa = file.filename;
-      } else if (file.fieldname.toUpperCase() == 'AVATAR') {
-        perfil.avatar = file.filename;
+    if (files) {
+      for (let file of files) {
+        if (file.fieldname.toUpperCase() == 'CAPA') {
+          perfil.capa = file.filename;
+        } else if (file.fieldname.toUpperCase() == 'AVATAR') {
+          perfil.avatar = file.filename;
+        }
       }
     }
     
     let result = await Perfil.update(perfil, {
       where: {
-        id: req.session.USER.id
+        id
       }
     });
     res.redirect('/users/perfil');

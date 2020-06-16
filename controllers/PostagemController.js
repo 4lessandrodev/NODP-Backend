@@ -44,7 +44,7 @@ module.exports = {
   //http://localhost:3000/teste/postagens
   salvar: async (req, res) => {
     try {
-      post = {};
+      let post = {};
       let {
         
         categoria_id,
@@ -52,15 +52,15 @@ module.exports = {
         descricao,
         
       } = req.body;
-      
+      let { files } = req;
       
       post.categoria_id = categoria_id;
       post.titulo = titulo;
       post.descricao = descricao;
       post.usuario_id = req.session.USER.id;
       
-      for (let img of req.files) {
-        post.imagem = img.filename;
+      if(files){
+        post.imagem = files[0].filename;
       }
       
       switch (categoria_id) {
@@ -82,7 +82,7 @@ module.exports = {
       res.redirect('/users/home');
     } catch (error) {
       console.log(error);
-      res.send(error);
+      res.redirect('/users/home');
     }
   },
   
